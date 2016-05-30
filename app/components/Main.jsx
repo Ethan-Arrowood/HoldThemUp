@@ -1,4 +1,12 @@
 var React = require("react");
+var moltin = require("moltin")({
+  publicId: 'QNhaJi0rbUMcliDZXxOFrgWQBtBewZLhirmNi7PnHg'
+});
+
+moltin.Authenticate(function() {
+  var product = moltin.product.find({slug: 'testproduct1'});
+  console.log(product);
+});
 
 var Main = (props) => {
   return (
