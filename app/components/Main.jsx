@@ -1,11 +1,11 @@
 var React = require("react");
 var moltin = require("moltin")({
-  publicId: 'QNhaJi0rbUMcliDZXxOFrgWQBtBewZLhirmNi7PnHg'
+  publicId: 'QNhaJi0rbUMcliDZXxOFrgWQBtBewZLhirmNi7PnHg',
+  secretKey: 'mbGEmOOOGrKZCL9eFNcDGW6SQ1EZa5oaU7qsQ4fPnx'
 });
 
 moltin.Authenticate(function() {
-  var product = moltin.product.find({slug: 'testproduct1'});
-  console.log(product);
+  console.log("test");
 });
 
 var Main = (props) => {
