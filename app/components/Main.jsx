@@ -1,12 +1,5 @@
 var React = require("react");
-var moltin = require("moltin")({
-  publicId: 'QNhaJi0rbUMcliDZXxOFrgWQBtBewZLhirmNi7PnHg',
-  secretKey: 'mbGEmOOOGrKZCL9eFNcDGW6SQ1EZa5oaU7qsQ4fPnx'
-});
-
-moltin.Authenticate(function() {
-  console.log("test");
-});
+var Moltin = require("Moltin");
 
 var Main = (props) => {
   return (
@@ -14,6 +7,7 @@ var Main = (props) => {
       <div>
         <div>
           <p>Main.jsx rendered</p>
+          <Moltin/>
           {props.children}
         </div>
       </div>

@@ -11,7 +11,6 @@ $(document).foundation();
 require('style!css!sass!applicationStyles');
 
 
-
 ReactDOM.render( //most common react-dom method
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
