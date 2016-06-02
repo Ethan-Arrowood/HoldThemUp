@@ -23,7 +23,6 @@ module.exports = {
     root: __dirname,
     alias: {
       Main: "app/components/Main.jsx",
-      Moltin: "app/api/Moltin.jsx",
       applicationStyles: "app/styles/app.scss"
     },
     extensions: ["", ".js", ".jsx"]

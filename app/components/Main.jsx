@@ -1,5 +1,4 @@
 var React = require("react");
-var Moltin = require("Moltin");
 
 var Main = (props) => {
   return (
@@ -7,7 +6,6 @@ var Main = (props) => {
       <div>
         <div>
           <p>Main.jsx rendered</p>
-          <Moltin/>
           {props.children}
         </div>
       </div>
