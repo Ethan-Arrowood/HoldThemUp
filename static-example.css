@@ -1,0 +1,37 @@
+.categories-list, .tags-list {
+    display: none;
+}
+
+.categories-tags {
+    border-right: 1px solid grey;
+}
+
+.categories-tags > h3 {
+    padding-bottom: 2px;
+    border-bottom: 1px solid black;
+}
+
+.categories-tags > h4 {
+    padding-left: 5px;
+    width: 90%;
+    border-left: 5px solid grey;
+}
+
+.sublist {
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+.tags.sublist form[role=search] input {
+    width: 100%
+}
+
+.clear-search {
+    color: red;
+}
+
+.clear-search:hover {
+    cursor:pointer;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
