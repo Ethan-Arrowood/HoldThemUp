@@ -49,131 +49,236 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="hidden-xs col-sm-3 col-md-2 categories-tags">
-
-            <h3 class="text-center">Categories</h3>
-            <form class="form-inline">
-                <div class="form-group">
-                    <input type="text" class="form-control" name="search_categories" placeholder="Search Categories">
-                </div>
-                <span class="clear-search" onclick="clearSearch('search_categories')">Clear Search</span>
-            </form>
-            <ul class="categories sublist">
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="all_categories" checked>All Categories
-                        </label>
+        <div class="hidden-xs col-sm-3 col-md-3 col-lg-2 categories-tags">
+            <div id="categories">
+                <h3 class="text-center">Categories</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="search_categories" placeholder="Search Categories">
                     </div>
-                </li>
-            </ul>
-            <ul class="categories-list sublist">
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Category 1
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Category 2
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Category 3
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Category 4
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Category 5
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Category 6
-                        </label>
-                    </div>
-                </li>
-            </ul>
-
-            <hr>
-            <h3 class="text-center">Other</h3>
-            <h4>Tags</h4>
-            <ul class="tags sublist">
-                <li>
-                    <form class="form-inline" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="search_tags" placeholder="Search Tags">
+                    <span class="clear-search" onclick="clearField('[name=search_categories]')">Clear Search</span>
+                </form>
+                <ul class="categories sublist">
+                    <li>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="all_categories" onclick="toggleHandler('.categories-list')" checked>All Categories
+                            </label>
                         </div>
-                        <span class="clear-search" onclick="clearSearch('search_tags')">Clear Search</span>
-                    </form>
-                </li>
-            </ul>
-            <ul class="tags sublist">
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" id="all_tags" checked>All Tags
-                        </label>
-                    </div>
-                </li>
-            </ul>
-            <ul class="tags-list sublist">
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Tag 1
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Tag 2
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Tag 3
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Tag 4
-                        </label>
-                    </div>
-                </li>
-                <li>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">Tag 5
-                        </label>
-                    </div>
-                </li>
-            </ul>
-            <h4>Price</h4>
+                    </li>
+                    <li>
+                        <ul class="categories-list sublist">
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Category 1
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Category 2
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Category 3
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Category 4
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Category 5
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">Category 6
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div id="other">
+                <h3 class="text-center">Sort by </h3>
+                <div id="tags">
+                    <h4 onclick="toggleHandler('.tags.sublist')">Tags</h4>
 
-            <h4>Designer</h4>
+                    <ul class="tags sublist">
+                        <li>
+                            <form role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="search_tags" placeholder="Search Tags">
+                                </div>
+                                <span class="clear-search" onclick="clearField('[name=search_tags]')">Clear Search</span>
+                            </form>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="all_tags" onclick="toggleHandler('.tags-list')" checked>All Tags
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <ul class="tags-list sublist">
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Tag 1
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Tag 2
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Tag 3
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Tag 4
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Tag 5
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+                <hr>
+                <div id="price">
+                    <h4 onclick="toggleHandler('.prices.sublist')">Price</h4>
+                    <ul class="prices sublist">
+                        <li>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="all_prices" onclick="toggleHandler('.price-range')" checked>All Prices
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <form class="price-range">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                       <div class="input-group-addon">$</div>
+                                        <input type="number" class="form-control" name="max-price" onchange="checkMin(this.value)" placeholder="Max Price" min=0>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">$</div>
+                                        <input type="number" class="form-control" name="min-price" onchange="checkMax(this.value)" placeholder="Min Price" min=0>
+                                    </div>
+                                </div>
+
+
+                                <span class="clear-search" onclick="clearField('.price-range>div>div>input')">Clear Range</span>
+                            </form>
+                        </li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+                <div id="designer">
+                    <h4 onclick="toggleHandler('.designers.sublist')">Designer</h4>
+                    <ul class="designers sublist">
+                        <li>
+                            <form role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="search_designers" placeholder="Search Designers">
+                                </div>
+                                <span class="clear-search" onclick="clearField('[name=search_designers]')">Clear Search</span>
+                            </form>
+                        </li>
+                        <li>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="all_designers" onclick="toggleHandler('.designers-list')" checked>All Designers
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <ul class="designers-list sublist">
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Designer 1
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Designer 2
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Designer 3
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Designer 4
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">Designer 5
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
         </div>
         <div class="col-xs-12 col-sm-9">
 
@@ -183,7 +288,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    
+
     <script src="static-example.js"></script>
 </body>
 

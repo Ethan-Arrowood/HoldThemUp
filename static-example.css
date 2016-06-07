@@ -1,27 +1,35 @@
-.categories-list, .tags-list {
+.categories-list, .tags-list, .price-range, .designers-list {
+    display: none;
+    border-left: 1px solid grey;
+}
+.tags.sublist, .prices.sublist, .designers.sublist {
     display: none;
 }
-
 .categories-tags {
     border-right: 1px solid grey;
 }
 
-.categories-tags > h3 {
+.categories-tags h3 {
     padding-bottom: 2px;
     border-bottom: 1px solid black;
 }
 
-.categories-tags > h4 {
+.categories-tags h4 {
     padding-left: 5px;
     width: 90%;
     border-left: 5px solid grey;
+}
+.categories-tags h4:hover {
+    background-color: rgba(0,0,0,.1);
 }
 
 .sublist {
     padding-left: 15px;
     list-style-type: none;
 }
-
+.categories-tags .form-group {
+    margin-bottom: 5px;
+}
 .tags.sublist form[role=search] input {
     width: 100%
 }
@@ -34,4 +42,12 @@
     cursor:pointer;
     text-decoration: underline;
     text-decoration-color: red;
+}
+
+.price-range {
+    padding-left: 5px;
+}
+
+.input-group-addon {
+    font-size: 1.3rem;
 }
