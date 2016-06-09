@@ -68,6 +68,9 @@
 .product-info hr {
     margin: 5px 0px 5px 0px;
 }
+.product-info {
+    margin-bottom: 3px;
+}
 .product-controls {
     text-align: center;
 }
